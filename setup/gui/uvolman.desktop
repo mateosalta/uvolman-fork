@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=uVolMan
+Exec=uvolman
+TryExec=uvolman
+Icon=${SNAP}/meta/gui/uVolMan.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true

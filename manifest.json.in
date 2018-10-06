@@ -1,0 +1,15 @@
+{
+    "name": "uvolman.mateosalta",
+    "description": "a simple Volume Controller for Ubuntu Phone",
+    "architecture": "@CLICK_ARCH@",
+    "title": "uVolMan",
+    "hooks": {
+        "uVolMan": {
+            "apparmor": "uVolMan/uVolMan.apparmor",
+            "desktop": "uVolMan/uVolMan.desktop"
+        }
+    },
+    "version": "0.2",
+    "maintainer": "Devid Antonio Filoni <d.filoni@ubuntu.com>",
+    "framework": "ubuntu-sdk-16.04"
+}

@@ -1,0 +1,81 @@
+# Italian translation for uvolman
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the uvolman package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: uvolman\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-13 22:10+0000\n"
+"PO-Revision-Date: 2017-01-01 20:05+0000\n"
+"Last-Translator: Devid Antonio Filoni <Unknown>\n"
+"Language-Team: Italian <it@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2017-01-02 05:31+0000\n"
+"X-Generator: Launchpad (build 18298)\n"
+
+#: /home/mateo/uvolman/uVolMan/AboutPage.qml:32
+msgid "About uVolMan"
+msgstr "Informazioni su uVolMan"
+
+#: /home/mateo/uvolman/uVolMan/AboutPage.qml:56
+msgid "Application"
+msgstr "Applicazione"
+
+#: /home/mateo/uvolman/uVolMan/AboutPage.qml:74
+msgid "uVolMan is a simple Volume Controller for Ubuntu Phone"
+msgstr "uVolMan è un semplice regolatore di volume per Ubuntu Phone"
+
+#: /home/mateo/uvolman/uVolMan/AboutPage.qml:105
+msgid "Author"
+msgstr "Autore"
+
+#: /home/mateo/uvolman/uVolMan/AboutPage.qml:152
+#, qt-format
+msgid "Version %1<br />Under License %2"
+msgstr "Versione %1<br />Sotto licenza %2"
+
+#: /home/mateo/uvolman/uVolMan/Main.qml:50
+#: /home/mateo/uvolman/build/uVolMan/uVolMan.desktop.h:1
+msgid "uVolMan"
+msgstr "uVolMan"
+
+#: /home/mateo/uvolman/uVolMan/Main.qml:60
+msgid "About"
+msgstr "Informazioni"
+
+#: /home/mateo/uvolman/uVolMan/Main.qml:118
+msgid "Indicator.Sound"
+msgstr "Indicator.Sound"
+
+#: /home/mateo/uvolman/uVolMan/Main.qml:127
+msgid "Speakers"
+msgstr "Altoparlanti"
+
+#: /home/mateo/uvolman/uVolMan/Main.qml:147
+msgid "Speakers configuration not available!"
+msgstr "Configurazione altoparlanti non disponibile!"
+
+#: /home/mateo/uvolman/uVolMan/Main.qml:154
+msgid "Microphone"
+msgstr "Microfono"
+
+#: /home/mateo/uvolman/uVolMan/Main.qml:174
+msgid "Microphone configuration not available!"
+msgstr "Configurazione microfono non disponibile!"
+
+#: /home/mateo/uvolman/uVolMan/Main.qml:193
+msgid "PulseAudio.Ext.StreamRestore1"
+msgstr "PulseAudio.Ext.StreamRestore1"
+
+#: /home/mateo/uvolman/uVolMan/Main.qml:297
+msgid "StreamRestore1 configuration not available!"
+msgstr "Configurazione StreamRestore1 non disponibile!"
+
+#: /home/mateo/uvolman/uVolMan/VolSlider.qml:44
+msgid "Volume"
+msgstr "Volume"

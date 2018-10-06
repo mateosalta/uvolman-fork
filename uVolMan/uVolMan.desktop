@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=uVolMan
+Exec=qmlscene %U uVolMan/Main.qml
+Icon=uVolMan/uVolMan.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

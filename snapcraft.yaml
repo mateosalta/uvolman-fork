@@ -1,0 +1,40 @@
+name: uvolman
+version: 0.1
+summary: Simple Volume Controller for Ubuntu Phone
+description: Allows you to change your microphone volume and speakers \
+ volume levels for applications roles (phone, multimedia, alarm, alert). \
+ It uses D-Bus to comunicate with indicator-sound service and \
+ PulseAudio stream-restore module.
+grade: stable
+confinement: strict
+
+apps:
+  uvolman:
+    command: desktop-launch "qmlscene $SNAP/uVolMan/Main.qml"
+    plugs: [unity7, unity8, opengl, platform]
+
+plugs:
+  platform:
+    content: ubuntu-app-platform1
+    default-provider: ubuntu-app-platform
+    interface: content
+    target: ubuntu-app-platform
+
+parts:
+  uvolman:
+    plugin: qmake
+    source: .
+    qt-version: qt5
+    options: ["CONFIG+=snapcraft"]
+    project-files: [uVolMan.pro]
+    build-packages:
+      - build-essential
+      - qtbase5-dev
+      - qt5-qmake
+
+  ubuntu-app-platform:
+    plugin: qmake
+    source: ubuntu-app-platform/
+    qt-version: qt5
+    after: [desktop-ubuntu-app-platform]
+    snap: [ubuntu-app-platform]
