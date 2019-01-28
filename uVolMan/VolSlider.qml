@@ -22,6 +22,8 @@ import Ubuntu.Components 1.3
 
 Column {
     property alias slider: sliderId
+        property alias icon1: iconId1
+        property alias icon: iconId
     property alias labelText: label.text
     property alias divider: listItem.divider
 
@@ -45,6 +47,7 @@ Column {
         }
 
         Icon {
+        id: iconId
             anchors {
                 top: label.bottom
                 left: parent.left
@@ -72,6 +75,7 @@ Column {
         }
 
         Icon {
+        id: iconId1
             anchors {
                 top: label.bottom
                 right: parent.right

@@ -5,4 +5,7 @@ Icon=uVolMan/uVolMan.png
 Terminal=false
 Type=Application
 X-Ubuntu-Touch=true
-
+X-Ubuntu-Splash-Color=#aa0044
+_X-Ubuntu-Splash-Title=uVolMan
+X-Ubuntu-Splash-Show-Header=true
+X-Ubuntu-Splash-Image=uVolMan/uVolManBack.png

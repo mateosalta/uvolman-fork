@@ -31,8 +31,8 @@ Page {
         id: pageHeader
         title: i18n.tr("About uVolMan")
         StyleHints {
-            foregroundColor: "black"
-            backgroundColor: UbuntuColors.porcelain
+            foregroundColor: "white"
+                    backgroundColor: "#aa0044"
             dividerColor: UbuntuColors.silk
         }
     }
@@ -54,6 +54,7 @@ Page {
                 horizontalAlignment: Text.AlignLeft
                 font.pixelSize: units.gu(2);
                 text: i18n.tr("Application")
+                color: Theme.palette.normal.foregroundText
             }
             divider.visible: false
         }
@@ -72,6 +73,7 @@ Page {
                 }
                 horizontalAlignment: Text.AlignLeft
                 text: i18n.tr("uVolMan is a simple Volume Controller for Ubuntu Phone")
+                color: Theme.palette.normal.foregroundText
                 onPaintedHeightChanged: applicationDescription.height = applicationDescriptionText.paintedHeight+units.gu(2);
             }
         }
@@ -86,8 +88,9 @@ Page {
                     rightMargin: units.gu(2)
                 }
                 horizontalAlignment: Text.AlignLeft
-                text: "<a href=\"https://launchpad.net/uvolman\">https://launchpad.net/uvolman</a>"
-                onLinkActivated: Qt.openUrlExternally("https://launchpad.net/uvolman")
+                text: "<a href=\"https://github.com/mateosalta/uvolman-fork\">https://github.com/mateosalta/uvolman-fork</a>"
+                onLinkActivated: Qt.openUrlExternally("https://github.com/mateosalta/uvolman-fork")
+                
             }
         }
 
@@ -103,6 +106,7 @@ Page {
                 horizontalAlignment: Text.AlignLeft
                 font.pixelSize: units.gu(2);
                 text: i18n.tr("Author")
+                color: Theme.palette.normal.foregroundText
             }
             divider.visible: false
         }
@@ -118,6 +122,7 @@ Page {
                 }
                 horizontalAlignment: Text.AlignLeft
                 text: "Devid Antonio Filoni"
+                color: Theme.palette.normal.foregroundText
             }
         }
 
@@ -136,6 +141,54 @@ Page {
             }
             //onClicked: Qt.openUrlExternally("https://launchpad.net/~d.filoni")
         }
+        
+        ListItem {
+            Text {
+                anchors {
+                    fill: parent
+                    leftMargin: units.gu(2)
+                    rightMargin: units.gu(2)
+                    topMargin: units.gu(3);
+                    bottomMargin: units.gu(2);
+                }
+                horizontalAlignment: Text.AlignLeft
+                font.pixelSize: units.gu(2);
+                text: i18n.tr("Maintainer")
+                color: Theme.palette.normal.foregroundText
+            }
+            divider.visible: false
+        }
+
+        ListItem {
+            height: units.gu(4)
+            Text {
+                anchors {
+                    fill: parent
+                    topMargin: units.gu(1)
+                    leftMargin: units.gu(2)
+                    rightMargin: units.gu(2)
+                }
+                horizontalAlignment: Text.AlignLeft
+                text: "Mateo Salta"
+                color: Theme.palette.normal.foregroundText
+            }
+        }
+
+        ListItem {
+            height: units.gu(4)
+            Text {
+                anchors {
+                    fill: parent
+                    topMargin: units.gu(1)
+                    leftMargin: units.gu(2)
+                    rightMargin: units.gu(2)
+                }
+                horizontalAlignment: Text.AlignLeft
+                text: "<a href=\"https://github.com/mateosalta\">https://github.com/mateosalta</a>"
+                onLinkActivated: Qt.openUrlExternally("https://github.com/mateosalta")
+            }
+            //onClicked: Qt.openUrlExternally("https://github.com/mateosalta")
+        }
     }
 
     ListItem {
@@ -150,6 +203,7 @@ Page {
             }
             horizontalAlignment: Text.AlignLeft
             text: "© Devid Antonio Filoni 2016-2017<br />"+i18n.tr("Version %1<br />Under License %2").arg(uVolMan.applicationVersion).arg("<a href=\"http://www.gnu.org/licenses/gpl-3.0.en.html\">GPL3</a>")
+            color: Theme.palette.normal.foregroundText
             onLinkActivated: Qt.openUrlExternally(link)
             font.pixelSize: units.gu(1.6);
         }

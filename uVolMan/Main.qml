@@ -17,9 +17,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.4
+import QtQuick 2.9
 import Ubuntu.Components 1.3
 import UVolMan 1.0
+import Ubuntu.Components.ListItems 1.3 as ListItems
+import GSettings 1.0
 /*!
     \brief MainView with a Label and Button elements.
 */
@@ -28,10 +30,11 @@ MainView {
     // objectName for functional testing purposes (autopilot-qt5)
     id: uVolMan
     objectName: "mainView"
+        theme.name: "Ubuntu.Components.Themes.SuruDark"
 
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "uvolman.mateosalta"
-    property string applicationVersion: "0.2"
+    property string applicationVersion: "0.3"
 
     width: units.gu(100)
     height: units.gu(75)
@@ -49,8 +52,8 @@ MainView {
                 id: pageHeader
                 title: i18n.tr("uVolMan")
                 StyleHints {
-                    foregroundColor: "black"
-                    backgroundColor: UbuntuColors.porcelain
+                    foregroundColor: "white"
+                    backgroundColor: "#aa0044"
                     dividerColor: UbuntuColors.silk
                 }
                 trailingActionBar {
@@ -59,6 +62,7 @@ MainView {
                             iconName: "info"
                             text: i18n.tr("About")
                             onTriggered: mainStack.push(Qt.resolvedUrl("AboutPage.qml"))
+
                         }
                    ]
                    numberOfSlots: 1
@@ -115,7 +119,7 @@ MainView {
                                 bottomMargin: units.gu(2);
                             }
                             horizontalAlignment: Text.AlignLeft
-                            text: i18n.tr("Indicator.Sound")
+                            text: i18n.tr("Main")
                             font.pixelSize: units.gu(2);
                         }
                         divider.visible: false
@@ -126,6 +130,8 @@ MainView {
                         property bool firstValueChange: false
                         labelText: i18n.tr("Speakers")
                         slider.value: indicatorSoundService.cachedVolume
+                         icon.color: Theme.palette.normal.foregroundText
+                        icon1.color: Theme.palette.normal.foregroundText
                         slider.onValueChanged: {
                             if (indicatorSoundService.cachedVolume !== slider.value)
                                 indicatorSoundService.setVolume(slider.value);
@@ -153,6 +159,8 @@ MainView {
                         property bool firstValueChange: false
                         labelText: i18n.tr("Microphone")
                         slider.value: indicatorSoundService.cachedMicVolume
+                        icon.color: Theme.palette.normal.foregroundText
+                        icon1.color: Theme.palette.normal.foregroundText
                         slider.onValueChanged: {
                             if (indicatorSoundService.cachedMicVolume !== slider.value)
                                 indicatorSoundService.setMicVolume(slider.value);
@@ -190,7 +198,7 @@ MainView {
                                 bottomMargin: units.gu(2);
                             }
                             horizontalAlignment: Text.AlignLeft
-                            text: i18n.tr("PulseAudio.Ext.StreamRestore1")
+                            text: i18n.tr("Audio")
                             font.pixelSize: units.gu(2);
                         }
 
@@ -251,6 +259,8 @@ MainView {
                             model: streamRestoreEntriesList.extractEntriesKeys()
                             VolSlider {
                                 property variant entryObj: false
+                                                                icon.color:  streamRestoreEntriesCheckbox.checked ? Theme.palette.normal.foregroundText : "#808080"
+                                                                icon1.color:  streamRestoreEntriesCheckbox.checked ? Theme.palette.normal.foregroundText : "#808080"
                                 slider.onValueChanged: {
                                     entryObj.setVolume(slider.value);
                                 }
@@ -299,6 +309,89 @@ MainView {
                         }
                         divider.visible: (!pulseStreamRestore.isConnected())
                     }
+                    
+                        ListItem {
+                        //id: indicatorSoundLabel
+                        Label {
+                            anchors {
+                                fill: parent
+                                leftMargin: units.gu(2)
+                                topMargin: units.gu(3);
+                                bottomMargin: units.gu(2);
+                            }
+                            horizontalAlignment: Text.AlignLeft
+                            text: i18n.tr("High Volume Notification")
+                            font.pixelSize: units.gu(2);
+                        }
+                        divider.visible: false
+                    }
+                     GSettings {
+    id: settings
+    schema.id: "com.canonical.indicator.sound"
+  }
+  GSettings {
+    id: ubuntu
+    schema.id: "com.ubuntu.sound"
+  }
+                    
+    ListItems.Standard {
+      text: i18n.tr('warning-volume-enabled')
+      control: Switch {
+        checked: settings.warningVolumeEnabled
+        onClicked: {
+            settings.warningVolumeEnabled = checked ? 'true' : 'false'
+
+        }
+      }
+    }
+        ListItem {
+                        //id: indicatorSoundLabel
+                        Label {
+                            anchors {
+                                fill: parent
+                                leftMargin: units.gu(2)
+                                topMargin: units.gu(3);
+                                bottomMargin: units.gu(2);
+                            }
+                            horizontalAlignment: Text.AlignLeft
+                            text: i18n.tr("Amplification")
+                            font.pixelSize: units.gu(2);
+                        }
+                        divider.visible: false
+                    }
+      ListItems.Standard {
+      id: allowAmp
+      text: i18n.tr('allow-amplified-volume')
+      control: Switch {
+        checked: ubuntu.allowAmplifiedVolume
+        onClicked: {
+        //if(ubuntu.allowAmplifiedVolume == true)ampVolumeSlider.enabled = false;
+            ubuntu.allowAmplifiedVolume = checked ? 'true' : 'false'
+        }
+      }
+    }
+     VolSlider {
+                        id: ampVolumeSlider
+                        property bool firstValueChange: false
+                        labelText: i18n.tr("Ampliflication ammount")
+                        slider.value: -5.0
+                        //slider.function slider.formatValue(v) { return v.toFixed(0) }
+                        
+                        slider.onValueChanged: {
+                           
+                                // if (settings.amplifiedVolumeDecibels !== slider.value)
+                                settings.amplifiedVolumeDecibels = slider.value }
+                               
+
+                         slider.minimumValue: 0
+                          slider.maximumValue: 6
+                      //  enabled: if(ubuntu.allowAmplifiedVolume == true) return true;
+                      //  else return false;
+                      
+                     // enabled: ubuntu.allowAmplifiedVolume == true
+                       // divider.visible: (indicatorSoundService.cachedMicVolume != -1)
+                    }
+  
                 }
             }
         }

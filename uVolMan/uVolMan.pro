@@ -5,7 +5,8 @@ QML_FILES += $$files(*.qml,true) \
              $$files(*.js,true)
 
 CONF_FILES +=  uVolMan.apparmor \
-               uVolMan.png
+               uVolMan.png \
+               uVolManBack.png \
 
 OTHER_FILES += $${CONF_FILES} \
                $${QML_FILES} \
