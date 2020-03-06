@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: uvolman\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 03:28+0000\n"
-"PO-Revision-Date: 2016-12-31 21:06+0000\n"
+"PO-Revision-Date: 2020-03-06 13:14+0100\n"
 "Last-Translator: Devid Antonio Filoni <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2017-01-01 05:47+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
+"X-Generator: Poedit 2.3\n"
 
 #: /home/mateo/uvolman-fork/uVolMan/AboutPage.qml:32
 msgid "About uVolMan"
@@ -36,7 +36,7 @@ msgstr "Auteur"
 
 #: /home/mateo/uvolman-fork/uVolMan/AboutPage.qml:156
 msgid "Maintainer"
-msgstr ""
+msgstr "Mainteneur"
 
 #: /home/mateo/uvolman-fork/uVolMan/AboutPage.qml:205
 #, qt-format
@@ -54,7 +54,7 @@ msgstr "À propos"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:122
 msgid "Main"
-msgstr ""
+msgstr "Principaux"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:131
 msgid "Speakers"
@@ -62,7 +62,7 @@ msgstr "Haut-parleurs"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:153
 msgid "Speakers configuration not available!"
-msgstr "La configuration des haut-parleurs n'est pas disponible[nbsp]!"
+msgstr "La configuration des haut-parleurs n'est pas disponible !"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:160
 msgid "Microphone"
@@ -70,29 +70,27 @@ msgstr "Microphone"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:182
 msgid "Microphone configuration not available!"
-msgstr "La configuration du microphone n'est pas disponible[nbsp]!"
+msgstr "La configuration du microphone n'est pas disponible !"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:201
 msgid "Audio"
-msgstr ""
+msgstr "Audio"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:307
 msgid "StreamRestore1 configuration not available!"
-msgstr "La configuration de StreamRestore1 n'est pas disponible[nbsp]!"
+msgstr "La configuration de StreamRestore1 n'est pas disponible !"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:323
 msgid "High Volume Notification"
-msgstr ""
+msgstr "Notification de volume fort"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:357
-#, fuzzy
 msgid "Amplification"
-msgstr "Application"
+msgstr "Amplification"
 
 #: /home/mateo/uvolman-fork/uVolMan/Main.qml:376
-#, fuzzy
 msgid "Ampliflication ammount"
-msgstr "Application"
+msgstr "Niveau d'amplification"
 
 #: /home/mateo/uvolman-fork/uVolMan/VolSlider.qml:46
 msgid "Volume"
