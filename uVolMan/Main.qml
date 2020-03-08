@@ -30,11 +30,11 @@ MainView {
     // objectName for functional testing purposes (autopilot-qt5)
     id: uVolMan
     objectName: "mainView"
-        theme.name: "Ubuntu.Components.Themes.SuruDark"
+       // theme.name: "Ubuntu.Components.Themes.SuruDark"
 
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "uvolman.mateosalta"
-    property string applicationVersion: "0.3"
+    property string applicationVersion: "0.3.1"
 
     width: units.gu(100)
     height: units.gu(75)
@@ -259,8 +259,8 @@ MainView {
                             model: streamRestoreEntriesList.extractEntriesKeys()
                             VolSlider {
                                 property variant entryObj: false
-                                                                icon.color:  streamRestoreEntriesCheckbox.checked ? Theme.palette.normal.foregroundText : "#808080"
-                                                                icon1.color:  streamRestoreEntriesCheckbox.checked ? Theme.palette.normal.foregroundText : "#808080"
+                                                                icon.color:  streamRestoreEntriesCheckbox.checked ? Theme.palette.normal.foregroundText : Theme.palette.disabled.foregroundText
+                                                                icon1.color:  streamRestoreEntriesCheckbox.checked ? Theme.palette.normal.foregroundText : Theme.palette.disabled.foregroundText
                                 slider.onValueChanged: {
                                     entryObj.setVolume(slider.value);
                                 }
@@ -345,7 +345,7 @@ MainView {
       }
     }
         ListItem {
-                        //id: indicatorSoundLabel
+
                         Label {
                             anchors {
                                 fill: parent
@@ -363,9 +363,9 @@ MainView {
       id: allowAmp
       text: i18n.tr('allow-amplified-volume')
       control: Switch {
+      id: allowSwitch
         checked: ubuntu.allowAmplifiedVolume
         onClicked: {
-        //if(ubuntu.allowAmplifiedVolume == true)ampVolumeSlider.enabled = false;
             ubuntu.allowAmplifiedVolume = checked ? 'true' : 'false'
         }
       }
@@ -376,20 +376,17 @@ MainView {
                         labelText: i18n.tr("Ampliflication ammount")
                         slider.value: -5.0
                         //slider.function slider.formatValue(v) { return v.toFixed(0) }
+                                   icon.color:  allowSwitch.checked ? Theme.palette.normal.foregroundText : Theme.palette.disabled.foregroundText 
+                                   icon1.color:  allowSwitch.checked ? Theme.palette.normal.foregroundText : Theme.palette.disabled.foregroundText 
+                                
                         
                         slider.onValueChanged: {
-                           
-                                // if (settings.amplifiedVolumeDecibels !== slider.value)
-                                settings.amplifiedVolumeDecibels = slider.value }
-                               
-
-                         slider.minimumValue: 0
-                          slider.maximumValue: 6
-                      //  enabled: if(ubuntu.allowAmplifiedVolume == true) return true;
-                      //  else return false;
+                            settings.amplifiedVolumeDecibels = slider.value }
+                            enabled: allowSwitch.checked
+                            slider.minimumValue: 0
+                            slider.maximumValue: 6
+                     
                       
-                     // enabled: ubuntu.allowAmplifiedVolume == true
-                       // divider.visible: (indicatorSoundService.cachedMicVolume != -1)
                     }
   
                 }

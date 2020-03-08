@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uvolman\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 03:28+0000\n"
+"POT-Creation-Date: 2020-03-08 11:51+0000\n"
 "PO-Revision-Date: 2017-01-01 20:05+0000\n"
 "Last-Translator: Devid Antonio Filoni <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -18,83 +18,123 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-01-02 05:31+0000\n"
 "X-Generator: Launchpad (build 18298)\n"
 
-#: /home/mateo/uvolman-fork/uVolMan/AboutPage.qml:32
+#: /home/mateo/memo/uvolman-fork/uVolMan/AboutPage.qml:32
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/AboutPage.qml:32
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/AboutPage.qml:32
 msgid "About uVolMan"
 msgstr "Informazioni su uVolMan"
 
-#: /home/mateo/uvolman-fork/uVolMan/AboutPage.qml:56
+#: /home/mateo/memo/uvolman-fork/uVolMan/AboutPage.qml:56
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/AboutPage.qml:56
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/AboutPage.qml:56
 msgid "Application"
 msgstr "Applicazione"
 
-#: /home/mateo/uvolman-fork/uVolMan/AboutPage.qml:75
+#: /home/mateo/memo/uvolman-fork/uVolMan/AboutPage.qml:75
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/AboutPage.qml:75
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/AboutPage.qml:75
 msgid "uVolMan is a simple Volume Controller for Ubuntu Phone"
 msgstr "uVolMan è un semplice regolatore di volume per Ubuntu Phone"
 
-#: /home/mateo/uvolman-fork/uVolMan/AboutPage.qml:108
+#: /home/mateo/memo/uvolman-fork/uVolMan/AboutPage.qml:108
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/AboutPage.qml:108
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/AboutPage.qml:108
 msgid "Author"
 msgstr "Autore"
 
-#: /home/mateo/uvolman-fork/uVolMan/AboutPage.qml:156
+#: /home/mateo/memo/uvolman-fork/uVolMan/AboutPage.qml:156
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/AboutPage.qml:156
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/AboutPage.qml:156
 msgid "Maintainer"
 msgstr ""
 
-#: /home/mateo/uvolman-fork/uVolMan/AboutPage.qml:205
+#: /home/mateo/memo/uvolman-fork/uVolMan/AboutPage.qml:205
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/AboutPage.qml:205
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/AboutPage.qml:205
 #, qt-format
 msgid "Version %1<br />Under License %2"
 msgstr "Versione %1<br />Sotto licenza %2"
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:53
-#: /home/mateo/uvolman-fork/build/uVolMan/uVolMan.desktop.h:1
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:53
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:53
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:53
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/uVolMan/uVolMan.desktop.h:1
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/uVolMan/uVolMan.desktop.h:1
+#: /home/mateo/memo/uvolman-fork/build/x86_64-linux-gnu/app/uVolMan/uVolMan.desktop.h:1
 msgid "uVolMan"
 msgstr "uVolMan"
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:63
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:63
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:63
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:63
 msgid "About"
 msgstr "Informazioni"
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:122
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:122
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:122
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:122
 msgid "Main"
 msgstr ""
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:131
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:131
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:131
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:131
 msgid "Speakers"
 msgstr "Altoparlanti"
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:153
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:153
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:153
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:153
 msgid "Speakers configuration not available!"
 msgstr "Configurazione altoparlanti non disponibile!"
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:160
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:160
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:160
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:160
 msgid "Microphone"
 msgstr "Microfono"
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:182
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:182
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:182
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:182
 msgid "Microphone configuration not available!"
 msgstr "Configurazione microfono non disponibile!"
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:201
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:201
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:201
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:201
 msgid "Audio"
 msgstr ""
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:307
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:307
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:307
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:307
 msgid "StreamRestore1 configuration not available!"
 msgstr "Configurazione StreamRestore1 non disponibile!"
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:323
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:323
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:323
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:323
 msgid "High Volume Notification"
 msgstr ""
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:357
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:357
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:357
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:357
 #, fuzzy
 msgid "Amplification"
 msgstr "Applicazione"
 
-#: /home/mateo/uvolman-fork/uVolMan/Main.qml:376
+#: /home/mateo/memo/uvolman-fork/uVolMan/Main.qml:376
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/Main.qml:376
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/Main.qml:376
 #, fuzzy
 msgid "Ampliflication ammount"
 msgstr "Applicazione"
 
-#: /home/mateo/uvolman-fork/uVolMan/VolSlider.qml:46
+#: /home/mateo/memo/uvolman-fork/uVolMan/VolSlider.qml:46
+#: /home/mateo/memo/uvolman-fork/build/aarch64-linux-gnu/app/install/uVolMan/VolSlider.qml:46
+#: /home/mateo/memo/uvolman-fork/build/arm-linux-gnueabihf/app/install/uVolMan/VolSlider.qml:46
 msgid "Volume"
 msgstr "Volume"
 
