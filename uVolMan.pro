@@ -15,7 +15,7 @@ UBUNTU_MANIFEST_FILE=manifest.json.in
 
 # specify translation domain, this must be equal with the
 # app name in the manifest file
-UBUNTU_TRANSLATION_DOMAIN="uvolman.dfiloni"
+UBUNTU_TRANSLATION_DOMAIN="uvolman.mateosalta"
 
 # specify the source files that should be included into
 # the translation file, from those files a translation
