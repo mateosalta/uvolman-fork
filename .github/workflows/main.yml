@@ -50,6 +50,7 @@ jobs:
           ignore_review_warnings: true
           run: clickable build --verbose  ${BUILD_TYPE}
       - uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: "ubports-${{ matrix.arch }}--${{ matrix.build }}--click"
           path: "build/*/app/*.click"
