@@ -42,10 +42,13 @@ jobs:
       - name: build package
         env:
           BUILD_TYPE: ${{ (matrix.build == 'Debug') && '--debug' || '' }}
+          CLICKABLE_FRAMEWORK: ubuntu-sdk-20.04
+          
         uses: tuxecure/clickable@v1
         with:
           image: clickable/ci-20.04-${{ matrix.arch }}
-          run: clickable build --verbose --ignore_review_warnings ${BUILD_TYPE}
+          ignore_review_warnings: true
+          run: clickable build --verbose  ${BUILD_TYPE}
       - uses: actions/upload-artifact@v3
         with:
           name: "ubports-${{ matrix.arch }}--${{ matrix.build }}--click"
