@@ -1,0 +1,54 @@
+#  youtube-web - Youtube webapp for Ubuntu Touch
+#  Copyright (C) 2021 A. Semphris <semphris@protonmail.com>
+#                2021 Mateo Salta <mateo_salta@yahoo.com>
+#
+#  This program is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation; either version 3
+#  of the License, or (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  create: 
+    tags: releases/[1-9]+.[0-9]+.[0-9]+
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  ubuntu-touch:
+    strategy:
+      fail-fast: false
+      matrix:
+         build: [Release, Debug]
+         arch: [armhf, arm64, amd64]
+         version: ['refs/tags/uvolman']
+
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: build package
+        env:
+          BUILD_TYPE: ${{ (matrix.build == 'Debug') && '--debug' || '' }}
+        uses: tuxecure/clickable@v1
+        with:
+          image: clickable/ci-20.04-${{ matrix.arch }}
+          run: clickable build --verbose --ignore_review_warnings ${BUILD_TYPE}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: "ubports-${{ matrix.arch }}--${{ matrix.build }}--click"
+          path: "build/*/app/*.click"
+          if-no-files-found: ignore
+    
