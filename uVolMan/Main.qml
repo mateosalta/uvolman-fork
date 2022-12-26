@@ -34,7 +34,7 @@ MainView {
 
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "uvolman.mateosalta"
-    property string applicationVersion: "0.3.1"
+    property string applicationVersion: "0.4.0"
 
     width: units.gu(100)
     height: units.gu(75)
@@ -327,11 +327,11 @@ MainView {
                     }
                      GSettings {
     id: settings
-    schema.id: "com.canonical.indicator.sound"
+    schema.id: "org.ayatana.indicator.sound"
   }
   GSettings {
     id: ubuntu
-    schema.id: "com.ubuntu.sound"
+    schema.id: "com.lomiri.sound"
   }
                     
     ListItems.Standard {

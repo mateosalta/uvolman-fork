@@ -19,8 +19,8 @@
 
 #include "IndicatorSoundService.h"
 
-#define DBUS_SERVICE "com.canonical.indicator.sound"
-#define DBUS_PATH "/com/canonical/indicator/sound"
+#define DBUS_SERVICE "org.ayatana.indicator.sound"
+#define DBUS_PATH "/org/ayatana/indicator/sound"
 
 IndicatorSoundService::IndicatorSoundService(QObject *parent)
     : QObject(parent),
