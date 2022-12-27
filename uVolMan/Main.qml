@@ -18,9 +18,9 @@
  */
 
 import QtQuick 2.9
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import UVolMan 1.0
-import Ubuntu.Components.ListItems 1.3 as ListItems
+import Lomiri.Components.ListItems 1.3 as ListItems
 import GSettings 1.0
 /*!
     \brief MainView with a Label and Button elements.

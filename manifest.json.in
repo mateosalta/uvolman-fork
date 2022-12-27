@@ -11,5 +11,5 @@
     },
     "version": "0.3.3",
     "maintainer": "Devid Antonio Filoni <d.filoni@ubuntu.com>",
-    "framework": "ubuntu-sdk-16.04"
+    "framework": "ubuntu-sdk-20.04"
 }
