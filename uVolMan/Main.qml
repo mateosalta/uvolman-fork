@@ -265,8 +265,7 @@ MainView {
                                 visible: {
                                    if (labelText == 'sink-input-by-media-role:phone' ||
                                        labelText == 'sink-input-by-media-role:alert' ||
-                                       labelText == 'sink-input-by-media-role:multimedia' ||
-                                       labelText == 'sink-input-by-media-role:alarm')
+                                       labelText == 'sink-input-by-media-role:multimedia')
                                        return true;
                                    else
                                        return false;
