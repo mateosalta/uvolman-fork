@@ -30,7 +30,6 @@ MainView {
     // objectName for functional testing purposes (autopilot-qt5)
     id: uVolMan
     objectName: "mainView"
-       // theme.name: "Ubuntu.Components.Themes.SuruDark"
 
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "uvolman.mateosalta"
@@ -54,7 +53,6 @@ MainView {
                 StyleHints {
                     foregroundColor: "white"
                     backgroundColor: "#aa0044"
-                    dividerColor: UbuntuColors.silk
                 }
                 trailingActionBar {
                     actions: [
