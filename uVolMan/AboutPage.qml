@@ -33,7 +33,6 @@ Page {
         StyleHints {
             foregroundColor: "white"
                     backgroundColor: "#aa0044"
-            dividerColor: UbuntuColors.silk
         }
     }
 
